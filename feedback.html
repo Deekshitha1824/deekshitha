@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+        /* Default styles for large screens */
+        body {
+            font-size: 18px;
+        }
+
+        /* Styles for screens smaller than 768px (mobile) */
+        @media screen and (max-width: 768px) {
+            body {
+                font-size: 14px;
+            }
+        }
+
+        /* Styles for screens between 768px and 1024px (tablet) */
+        @media screen and (max-width: 1024px) {
+            body {
+                font-size: 16px;
+            }
+        }
+      img {
+    max-width: 100%;  /* Ensures images scale to the container width */
+    height: auto;     /* Maintains the aspect ratio */
+}
+
+    </style>
+</head>
+  <title>Feedback Page</title>
+  <style>
+    /* General styles */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #E4F1D7;
+      margin: 0;
+      padding: 20px;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: #94B16F;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 8px solid #B3D07E;
+      margin-top: 30px;
+      box-shadow: 0px 5px 10px #B3D07E;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+      padding: 10px 15px;
+      border-radius: 5px;
+      background-color: #BEDA9D;
+      border: 3px solid #B3D07E;
+      box-shadow: 2px 2px 5px #94B16F;
+    }
+
+    /* Form Container */
+    form {
+      background-color: #BEDA9D;
+      padding: 20px;
+      border-radius: 15px;
+      border: 7px solid #B3D07E;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+      max-width: 600px;
+      margin: 20px auto;
+    }
+
+    h1 {
+      text-align: center;
+      color: #94B16F;
+      text-shadow: 2px 2px 5px #B3D07E;
+    }
+
+    label {
+      font-size: 16px;
+      margin-bottom: 10px;
+      display: block;
+      color: #333;
+    }
+
+    input[type="text"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border-radius: 10px;
+      border: 3px solid #94B16F;
+      box-shadow: inset 2px 2px 5px #B3D07E;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    input[type="radio"],
+    input[type="checkbox"] {
+      margin-right: 10px;
+    }
+
+    input[type="submit"] {
+      background-color: #94B16F;
+      color: white;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+      box-shadow: 3px 3px 6px #B3D07E;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #B3D07E;
+    }
+
+    .rating {
+      display: flex;
+      justify-content: center;
+      font-size: 2rem;
+      color: gold;
+    }
+
+    .rating .star {
+      cursor: pointer;
+    }
+
+    #thank-you-animation {
+      text-align: center;
+      display: none;
+      animation: confetti 3s infinite;
+    }
+
+    @keyframes confetti {
+      0% { transform: translateY(0); opacity: 1; }
+      100% { transform: translateY(200px); opacity: 0; }
+    }
+
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <a href="index.html.html">&#8592; Back to Home</a>
+  </div>
+  
+  <h1>Feedback Survey</h1>
+
+  <!-- Rating System -->
+  <div class="rating">
+    <label for="rating">Rate your experience: </label>
+    <span class="star" data-value="1">★</span>
+    <span class="star" data-value="2">★</span>
+    <span class="star" data-value="3">★</span>
+    <span class="star" data-value="4">★</span>
+    <span class="star" data-value="5">★</span>
+  </div>
+
+  <form id="feedbackForm" action="#" method="post">
+    <label for="name">Your Name:</label>
+    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+    <label for="rating">How would you rate your experience?</label>
+    <input type="radio" id="excellent" name="rating" value="Excellent">
+    <label for="excellent">Excellent</label>
+    <input type="radio" id="good" name="rating" value="Good">
+    <label for="good">Good</label>
+    <input type="radio" id="average" name="rating" value="Average">
+    <label for="average">Average</label>
+    <input type="radio" id="poor" name="rating" value="Poor">
+    <label for="poor">Poor</label>
+
+    <label for="feedback">What did you like about our website?</label>
+    <textarea id="feedback" name="feedback" rows="4" placeholder="Enter your feedback here" required></textarea>
+
+    <label for="suggestions">What features would you like to see next?</label>
+    <input type="checkbox" id="feature1" name="feature1" value="New themes">
+    <label for="feature1">New themes</label>
+    <input type="checkbox" id="feature2" name="feature2" value="More resources">
+    <label for="feature2">More resources</label>
+    <input type="checkbox" id="feature3" name="feature3" value="Community forum">
+    <label for="feature3">Community forum</label>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Page</title>
+</head>
+<body>
+    <h1>Feedback Form</h1>
+    <p>We value your feedback and suggestions. Please answer the questions below to help us improve.</p>
+
+    <form action="#" method="POST">
+        <label for="name">Your Name:</label><br>
+        <input type="text" id="name" name="name"><br><br>
+
+        <label for="email">Your Email:</label><br>
+        <input type="email" id="email" name="email"><br><br>
+
+        <label for="experience">How would you rate your overall experience with our website?</label><br>
+        <select id="experience" name="experience">
+            <option value="excellent">Excellent</option>
+            <option value="good">Good</option>
+            <option value="average">Average</option>
+            <option value="poor">Poor</option>
+        </select><br><br>
+
+        <label for="usability">How easy is it to navigate our website?</label><br>
+        <select id="usability" name="usability">
+            <option value="very_easy">Very Easy</option>
+            <option value="easy">Easy</option>
+            <option value="average">Average</option>
+            <option value="difficult">Difficult</option>
+        </select><br><br>
+
+        <label for="content_quality">How would you rate the quality of the content on our website?</label><br>
+        <select id="content_quality" name="content_quality">
+            <option value="excellent">Excellent</option>
+            <option value="good">Good</option>
+            <option value="average">Average</option>
+            <option value="poor">Poor</option>
+        </select><br><br>
+
+        <label for="features">Are there any features you would like to see added to the website?</label><br>
+        <textarea id="features" name="features" rows="4" cols="50"></textarea><br><br>
+
+        <label for="bugs">Did you encounter any bugs or errors while using the website?</label><br>
+        <textarea id="bugs" name="bugs" rows="4" cols="50"></textarea><br><br>
+
+        <label for="suggestions">Do you have any suggestions for improving the website?</label><br>
+        <textarea id="suggestions" name="suggestions" rows="4" cols="50"></textarea><br><br>
+
+        <label for="design">How would you rate the design and layout of the website?</label><br>
+        <select id="design" name="design">
+            <option value="excellent">Excellent</option>
+            <option value="good">Good</option>
+            <option value="average">Average</option>
+            <option value="poor">Poor</option>
+        </select><br><br>
+
+        <label for="speed">How would you rate the speed and performance of the website?</label><br>
+        <select id="speed" name="speed">
+            <option value="very_fast">Very Fast</option>
+            <option value="fast">Fast</option>
+            <option value="average">Average</option>
+            <option value="slow">Slow</option>
+        </select><br><br>
+
+        <label for="recommendation">Would you recommend our website to others?</label><br>
+        <select id="recommendation" name="recommendation">
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+            <option value="maybe">Maybe</option>
+        </select><br><br>
+
+        <label for="overall_impression">What is your overall impression of the website?</label><br>
+        <textarea id="overall_impression" name="overall_impression" rows="4" cols="50"></textarea><br><br>
+
+        <label for="improvement_areas">Are there any areas you think need improvement?</label><br>
+        <textarea id="improvement_areas" name="improvement_areas" rows="4" cols="50"></textarea><br><br>
+
+        <label for="additional_comments">Any additional comments or feedback?</label><br>
+        <textarea id="additional_comments" name="additional_comments" rows="4" cols="50"></textarea><br><br>
+
+        <input type="submit" value="Submit Feedback">
+    </form>
+</body>
+</html>
+
+    
+    <input type="submit" value="Submit Feedback">
+  </form>
+
+  <div id="confirmation-message" style="display:none;">
+    <h3>Thank you for your feedback! We will review it and get back to you shortly.</h3>
+  </div>
+
+  <div id="thank-you-animation">
+    <h3>Thank you for your feedback!</h3>
+    <div id="confetti"></div>
+  </div>
+
+  <script>
+    // Rating system functionality
+    const stars = document.querySelectorAll('.star');
+    stars.forEach(star => {
+      star.addEventListener('click', function() {
+        let rating = this.getAttribute('data-value');
+        alert("You rated this " + rating + " stars!");
+      });
+    });
+
+    // Feedback form submission and confirmation
+    document.getElementById("feedbackForm").addEventListener("submit", function(event){
+      event.preventDefault(); // Prevent the form from refreshing the page
+      document.getElementById("confirmation-message").style.display = "block"; // Show confirmation message
+      document.getElementById("thank-you-animation").style.display = "block"; // Show thank you animation
+      document.getElementById("feedbackForm").reset(); // Reset the form
+    });
+  </script>
+
+</body>
+</html>
+<!-- Chatbot Button (Initially Only an Icon) -->
+<div class="chatbot-icon" onclick="toggleChatbot()">💬</div>
+
+<!-- Chatbot Popup (Initially Hidden) -->
+<div class="chatbot-container" id="chatbot">
+    <div class="chatbot-header">
+        <span>Ask Me Anything!</span>
+        <button onclick="toggleChatbot()" class="close-btn">✖</button>
+    </div>
+    <div class="chatbot-body" id="chatBody">
+        <p><strong>Bot:</strong> Hi! Ask me anything about the Aga Khan Academy Mombasa.</p>
+    </div>
+    <div class="chatbot-footer">
+        <input type="text" id="chatInput" placeholder="Type a question..." onkeypress="if(event.key === 'Enter') sendMessage()">
+        <button onclick="sendMessage()">Send</button>
+    </div>
+
+</div>
+
+<style>
+    /* Chatbot Icon */
+    .chatbot-icon {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: #BEDA9D;
+        color: #BEDA9D;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        font-size: 24px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Chatbot Container */
+    .chatbot-container {
+        display: none;
+        position: fixed;
+        bottom: 80px;
+        right: 20px;
+        width: 700px;
+        height: 450px;
+        background: #BEDA9D;
+        border-radius: 10px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+        transform: translateY(20px);
+        opacity: 0;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .chatbot-container.show {
+        display: block;
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    /* Chatbot Header */
+    .chatbot-header {
+        background: #94B16F;
+        color: white;
+        padding: 10px;
+        text-align: center;
+        font-size: 16px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .close-btn {
+        background: none;
+        border: none;
+        color: white;
+        font-size: 18px;
+        cursor: pointer;
+    }
+
+    /* Chatbot Body */
+    .chatbot-body {
+        height: 400px;
+        padding: 10px;
+        overflow-y: auto;
+        font-size: 14px;
+    }
+
+    /* Chatbot Footer */
+    .chatbot-footer {
+        display: flex;
+        padding: 10px;
+        border-top: 1px solid #ccc;
+    }
+
+    .chatbot-footer input {
+        flex: 1;
+        padding: 5px;
+        border: none;
+        border-radius: 5px;
+    }
+
+    .chatbot-footer button {
+        background: #94B16F ;
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        cursor: pointer;
+        border-radius: 5px;
+        margin-left: 5px;
+    }
+</style>
+
+<script>
+    function toggleChatbot() {
+        let chatbot = document.getElementById("chatbot");
+        if (chatbot.style.display === "none" || chatbot.style.display === "") {
+            chatbot.style.display = "block";
+            setTimeout(() => chatbot.classList.add("show"), 10);
+        } else {
+            chatbot.classList.remove("show");
+            setTimeout(() => chatbot.style.display = "none", 300);
+        }
+    }
+
+    function sendMessage() {
+        let inputField = document.getElementById("chatInput");
+        let input = inputField.value.trim().toLowerCase();
+        if (input === "") return;
+
+        let chatBody = document.getElementById("chatBody");
+        chatBody.innerHTML += `<p><strong>You:</strong> ${input}</p>`;
+
+        let response = getBotResponse(input);
+        setTimeout(() => {
+            chatBody.innerHTML += `<p><strong>Bot:</strong> ${response}</p>`;
+            chatBody.scrollTop = chatBody.scrollHeight;
+        }, 500);
+
+        inputField.value = "";
+    }
+
+    function getBotResponse(input) {
+        const responses = {
+            "what are the school rules?": "Check the student handbook for details on dress code, attendance, and behavior policies.",
+            "what programs does the school offer?": "Our school offers IB programs, leadership initiatives, and extracurricular clubs.",
+            "where can i find the student handbook?": "The student handbook is available for download on the School Guide Page.",
+            "what are the school timings?": "Classes run from 8:00 AM to 3:30 PM, with extracurriculars extending beyond these hours.",
+            "where is the library located?": "The library is on the second floor of Block B, offering books, study areas, and digital resources.",
+            "how do i join a school club?": "Visit the extracurricular board or ask a teacher about available clubs.",
+            "how do i report bullying?": "You can report bullying confidentially to the counselor’s office or via the anti-bullying form on the website.",
+            "how do i give feedback about the website?": "You can submit feedback through the Feedback Page by answering a short survey.",
+            "how do i contact the school?": "Use the Contact Page to find the school's email, phone number, and contact form.",
+            "how can i download the student handbook?": "The handbook is available for download on the School Guide Page.",
+             "how do i access the school wifi?": "You can connect to the 'AKA Mombasa' network using the credentials provided by the IT department.",
+    "what time does school start and end?": "School starts at 7:30 AM and ends at 3:30 PM, but extracurricular activities may go beyond that.",
+    "how can i join a sports team?": "Tryouts for different sports teams are held at the beginning of each term. Contact the PE department for details!",
+    "where is the cafeteria located?": "The cafeteria is in the central building near the assembly hall.",
+    "who do i speak to if i have academic concerns?": "You can talk to your subject teacher, mentor, or the academic coordinator for guidance.",
+    "is there a school uniform?": "Yes, students are required to wear the school uniform. You can purchase it from the school store.",
+    "what are the rules for using the library?": "Students must maintain silence, return books on time, and use school-issued IDs to borrow materials.",
+    "how do i sign up for community service?": "You can register for service projects through the Service Learning office or speak to the CAS coordinator.",
+    "where can i get help with assignments?": "Teachers offer extra help sessions, and the library has academic resources for support.",
+    "are there school trips?": "Yes! The school organizes educational trips and excursions for different subjects and grade levels.",
+    "how do i report a lost item?": "Check the lost and found section near the admin office or inform a staff member.",
+    "how do i apply for a leadership position?": "Student leadership roles are open at the beginning of each academic year. Applications and interviews are conducted by the student council.",
+    "how do i register for after-school activities?": "You can sign up for clubs and activities through the school’s online portal or contact the activities coordinator.",
+    "is there a bus service for students?": "Yes, the school provides transport services. Contact the admin office for bus routes and registration details.",
+    "thank you": "You're welcome! 😊"
+
+        };
+
+        return responses[input] || "I'm not sure about that. Try asking about the school rules, programs, or facilities!";
+    }
+</script>

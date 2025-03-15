@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tips Page</title>
+  <style>
+        /* Default styles for large screens */
+        body {
+            font-size: 18px;
+        }
+
+        /* Styles for screens smaller than 768px (mobile) */
+        @media screen and (max-width: 768px) {
+            body {
+                font-size: 14px;
+            }
+        }
+
+        /* Styles for screens between 768px and 1024px (tablet) */
+        @media screen and (max-width: 1024px) {
+            body {
+                font-size: 16px;
+            }
+        }
+      img {
+    max-width: 100%;  /* Ensures images scale to the container width */
+    height: auto;     /* Maintains the aspect ratio */
+}
+
+    </style>
+</head>
+<body>
+    <!-- Your website content goes here -->
+</body>
+</html>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+      body {
+          font-family: Arial, sans-serif;
+          text-align: center;
+          background-color: #E4F1D7;
+          margin: 0;
+          padding: 0;
+      }
+      .container {
+          width: 80%;
+          margin: auto;
+          background: white;
+          padding: 20px;
+          border-radius: 15px;
+          border: 5px solid #94B16F;
+          margin-top: 20px;
+      }
+
+      /* Updated Navbar */
+      .nav-bar {
+          background: #94B16F;
+          padding: 15px;
+          border-bottom: 5px solid #B3D07E;
+          margin-top: 30px; /* Moved navbar lower */
+          
+          border-radius: 10px;
+      }
+
+      .nav-bar a {
+          color: black;
+          text-decoration: none;
+          margin: 0 15px;
+          font-size: 18px;
+          font-weight: bold;
+          padding: 10px 15px;
+          border-radius: 5px;
+          background-color: #BEDA9D;
+          
+          
+      }
+
+      .video-container {
+          display: flex;
+          justify-content: space-between;
+          gap: 20px;
+          margin-top: 20px;
+      }
+      iframe {
+          border-radius: 15px;
+          border: 3px solid #BEDA9D;
+      }
+      .tips-container {
+          margin-top: 20px;
+          padding: 20px;
+          background-color: #BEDA9D;
+          border-radius: 15px;
+          border: 7px solid #B3D07E;
+          box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+      }
+      .tips-container h2 {
+          color: #94B16F;
+          margin-bottom: 20px;
+      }
+      .tip {
+          background-color: #E4F1D7;
+          padding: 15px;
+          border-radius: 10px;
+          border-left: 7px solid #94B16F;
+          margin-bottom: 15px;
+          box-shadow: 2px 2px 5px #B3D07E;
+          font-size: 18px;
+          text-align: left;
+      }
+      .tip:nth-child(even) {
+          background-color: #BEDA9D;
+      }
+  </style>
+</head>
+
+<body>
+
+  <div class="nav-bar">
+      <a href="index.html.html">Home</a>
+      <a href="#">Tips</a>
+      <a href="#">Search</a>
+  </div>
+  
+  <div class="container">
+      <h1>Welcome to the Tips Page</h1>
+      <div class="video-container">
+        <div class="video">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/hDOwIAMmEbY" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="video">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/VSEM2MY1Or0" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <div class="tips-container">
+          <h2>8 Tips for New Students to Socialize</h2>
+          <div class="tip">1. <strong>Join Clubs or Activities:</strong> Participate in extracurricular activities to meet new people with similar interests.</div>
+          <div class="tip">2. <strong>Start Small Conversations:</strong> Break the ice by initiating small talk with classmates.</div>
+          <div class="tip">3. <strong>Be Open and Approachable:</strong> Smile, maintain eye contact, and use open body language.</div>
+          <div class="tip">4. <strong>Attend School Events:</strong> Go to school events like sports games to meet others outside the classroom.</div>
+          <div class="tip">5. <strong>Sit with Different Groups at Lunch:</strong> Try sitting with different people to expand your social circle.</div>
+          <div class="tip">6. <strong>Offer Help:</strong> Be helpful by assisting with projects or sharing study tips.</div>
+          <div class="tip">7. <strong>Be a Good Listener:</strong> Show genuine interest in others' conversations.</div>
+          <div class="tip">8. <strong>Be Patient and Confident:</strong> Building friendships takes time, so stay open to new opportunities.</div>
+      </div>
+  </div>
+  
+<body>
+ 
+    
+
+<!-- Chatbot Button (Initially Only an Icon) -->
+<div class="chatbot-icon" onclick="toggleChatbot()">💬</div>
+
+<!-- Chatbot Popup (Initially Hidden) -->
+<div class="chatbot-container" id="chatbot">
+    <div class="chatbot-header">
+        <span>Ask Me Anything!</span>
+        <button onclick="toggleChatbot()" class="close-btn">✖</button>
+    </div>
+    <div class="chatbot-body" id="chatBody">
+        <p><strong>Bot:</strong> Hi! Ask me anything about the Aga Khan Academy Mombasa.</p>
+    </div>
+    <div class="chatbot-footer">
+        <input type="text" id="chatInput" placeholder="Type a question..." onkeypress="if(event.key === 'Enter') sendMessage()">
+        <button onclick="sendMessage()">Send</button>
+    </div>
+</div>
+
+<style>
+    /* Chatbot Icon */
+    .chatbot-icon {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: #BEDA9D;
+        color: #BEDA9D;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        font-size: 24px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Chatbot Container */
+    .chatbot-container {
+        display: none;
+        position: fixed;
+        bottom: 80px;
+        right: 20px;
+        width: 700px;
+        height: 450px;
+        background: #BEDA9D;
+        border-radius: 10px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+        transform: translateY(20px);
+        opacity: 0;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .chatbot-container.show {
+        display: block;
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    /* Chatbot Header */
+    .chatbot-header {
+        background: #94B16F;
+        color: white;
+        padding: 10px;
+        text-align: center;
+        font-size: 16px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .close-btn {
+        background: none;
+        border: none;
+        color: white;
+        font-size: 18px;
+        cursor: pointer;
+    }
+
+    /* Chatbot Body */
+    .chatbot-body {
+        height: 400px;
+        padding: 10px;
+        overflow-y: auto;
+        font-size: 14px;
+    }
+
+    /* Chatbot Footer */
+    .chatbot-footer {
+        display: flex;
+        padding: 10px;
+        border-top: 1px solid #ccc;
+    }
+
+    .chatbot-footer input {
+        flex: 1;
+        padding: 5px;
+        border: none;
+        border-radius: 5px;
+    }
+
+    .chatbot-footer button {
+        background: #94B16F ;
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        cursor: pointer;
+        border-radius: 5px;
+        margin-left: 5px;
+    }
+</style>
+
+<script>
+    function toggleChatbot() {
+        let chatbot = document.getElementById("chatbot");
+        if (chatbot.style.display === "none" || chatbot.style.display === "") {
+            chatbot.style.display = "block";
+            setTimeout(() => chatbot.classList.add("show"), 10);
+        } else {
+            chatbot.classList.remove("show");
+            setTimeout(() => chatbot.style.display = "none", 300);
+        }
+    }
+
+    function sendMessage() {
+        let inputField = document.getElementById("chatInput");
+        let input = inputField.value.trim().toLowerCase();
+        if (input === "") return;
+
+        let chatBody = document.getElementById("chatBody");
+        chatBody.innerHTML += `<p><strong>You:</strong> ${input}</p>`;
+
+        let response = getBotResponse(input);
+        setTimeout(() => {
+            chatBody.innerHTML += `<p><strong>Bot:</strong> ${response}</p>`;
+            chatBody.scrollTop = chatBody.scrollHeight;
+        }, 500);
+
+        inputField.value = "";
+    }
+
+    function getBotResponse(input) {
+        const responses = {
+            "what are the school rules?": "Check the student handbook for details on dress code, attendance, and behavior policies.",
+            "what programs does the school offer?": "Our school offers IB programs, leadership initiatives, and extracurricular clubs.",
+            "where can i find the student handbook?": "The student handbook is available for download on the School Guide Page.",
+            "what are the school timings?": "Classes run from 8:00 AM to 3:30 PM, with extracurriculars extending beyond these hours.",
+            "where is the library located?": "The library is on the second floor of Block B, offering books, study areas, and digital resources.",
+            "how do i join a school club?": "Visit the extracurricular board or ask a teacher about available clubs.",
+            "how do i report bullying?": "You can report bullying confidentially to the counselor’s office or via the anti-bullying form on the website.",
+            "how do i give feedback about the website?": "You can submit feedback through the Feedback Page by answering a short survey.",
+            "how do i contact the school?": "Use the Contact Page to find the school's email, phone number, and contact form.",
+            "how can i download the student handbook?": "The handbook is available for download on the School Guide Page.",
+             "how do i access the school wifi?": "You can connect to the 'AKA Mombasa' network using the credentials provided by the IT department.",
+    "what time does school start and end?": "School starts at 7:30 AM and ends at 3:30 PM, but extracurricular activities may go beyond that.",
+    "how can i join a sports team?": "Tryouts for different sports teams are held at the beginning of each term. Contact the PE department for details!",
+    "where is the cafeteria located?": "The cafeteria is in the central building near the assembly hall.",
+    "who do i speak to if i have academic concerns?": "You can talk to your subject teacher, mentor, or the academic coordinator for guidance.",
+    "is there a school uniform?": "Yes, students are required to wear the school uniform. You can purchase it from the school store.",
+    "what are the rules for using the library?": "Students must maintain silence, return books on time, and use school-issued IDs to borrow materials.",
+    "how do i sign up for community service?": "You can register for service projects through the Service Learning office or speak to the CAS coordinator.",
+    "where can i get help with assignments?": "Teachers offer extra help sessions, and the library has academic resources for support.",
+    "are there school trips?": "Yes! The school organizes educational trips and excursions for different subjects and grade levels.",
+    "how do i report a lost item?": "Check the lost and found section near the admin office or inform a staff member.",
+    "how do i apply for a leadership position?": "Student leadership roles are open at the beginning of each academic year. Applications and interviews are conducted by the student council.",
+    "how do i register for after-school activities?": "You can sign up for clubs and activities through the school’s online portal or contact the activities coordinator.",
+    "is there a bus service for students?": "Yes, the school provides transport services. Contact the admin office for bus routes and registration details.",
+    "thank you": "You're welcome! 😊"
+
+        };
+
+        return responses[input] || "I'm not sure about that. Try asking about the school rules, programs, or facilities!";
+    }
+</script>

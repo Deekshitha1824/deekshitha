@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Our School</title>
+    <style>
+        /* Default styles for large screens */
+        body {
+            font-size: 18px;
+        }
+
+        /* Styles for screens smaller than 768px (mobile) */
+        @media screen and (max-width: 768px) {
+            body {
+                font-size: 14px;
+            }
+        }
+
+        /* Styles for screens between 768px and 1024px (tablet) */
+        @media screen and (max-width: 1024px) {
+            body {
+                font-size: 16px;
+            }
+        }
+      img {
+    max-width: 100%;  /* Ensures images scale to the container width */
+    height: auto;     /* Maintains the aspect ratio */
+}
+
+    </style>
+</head>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<header class="header-container">
+    <img src="Capture.PNG" alt="Logo" class="logo">
+    <h1 class="school-name">The Aga Khan Academy Mombasa</h1>
+</header>
+<style>
+    .logo {
+        height: 70px; /* Adjust this value to change the logo size */
+    }
+</style>
+
+<body>
+
+<style>
+
+    /* Background and General Styles */
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #E4F1D7; /* Light greenish */
+        text-align: center;
+    }
+    nav {
+    margin-top: 30px; /* Adjust this value to move navbar down */
+    background-color: #94B16F;
+    padding: 10px;
+}
+
+    /* Header */
+    .header-container {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 10px 20px;
+        background-color: #B3D07E; /* Soft green */
+    }
+
+    .school-name {
+        font-family: 'Roboto'
+        font-size: 20px;
+        font-weight: bold;
+        color: #333; /* Dark text */
+    }
+
+    /* Navbar */
+    nav {
+        background-color: #94B16F; /* Olive green */
+        padding: 10px;
+   
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 500;
+        display: flex;
+        justify-content: center;
+    }
+
+    li {
+        margin: 0 15px;
+    }
+
+    a {
+        color: black; /* White text */
+        text-decoration: none;
+        font-size: 16px;
+    }
+
+    a:hover {
+        color: #B3D07E; /* Light green */
+    }
+
+    /* Dropdown Menu */
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #BEDA9D
+; /* Lighter green */
+        min-width: 100px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+    }
+
+    .dropdown-content a {
+        color: #333; /* Dark text */
+        padding: 10px;
+        display: block;
+        text-align: left;
+        text-decoration: none;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #B3D07E; /* Slightly darker green */
+    }
+
+    /* Content */
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        margin-top: 30px;
+        margin-bottom: 20px;
+        color: #333; /* Dark text */
+    }
+
+    p {
+        margin: 5px 50px;
+        color: #333; /* Dark text */
+    }
+
+    /* Footer */
+    footer {
+        background: #94B16F; /* Olive green */
+        color: white;
+        padding: 10px;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+
+</style>
+
+<nav>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li class="dropdown">
+      <a href="#" onclick="toggleMenu()">Menu</a>
+      <div id="menuDropdown" class="dropdown-content">
+        <a href="schoolguide.html">School Guide</a>
+        
+        <a href="contacts.html">Contacts</a>
+        <a href="tips.html">Tips</a>
+      </div>
+    </li>
+    <li><a href="feedback.html">Feedback</a></li>
+  </ul>
+</nav>
+
+<div class="container">
+    <img src="main.PNG" alt="School Image" style="width: 75%; height: auto; display: block; margin: 50px; border-radius: 20px;margin-left: auto;margin-right: auto;">
+<style>
+    .container img {
+    margin-top: 50px; /* Adjust this value to move the image lower */
+    width: 75%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+}
+
+</style>
+</div>
+
+<div class="welcome-text">
+  <p>Welcome to our website! This platform is designed to help new joiners feel at home and foster a sense of belonging. Through a variety of interactive tools, resources, and personalized experiences, we aim to make your transition smooth and exciting. Whether it’s connecting with fellow students, learning about school culture, or finding useful tips, we’re here to support you in every step of your journey! Our goal is to create a warm, welcoming environment where you can discover everything you need to thrive and succeed. From virtual tours of the school to tips on managing your studies, we’ve got you covered. Embrace the experience, and know that you’re never alone – we’re all here to make sure you feel supported, confident, and ready to take on the new chapter ahead!</p>
+</div>
+<style>
+
+.welcome-text p {
+    margin: 20px 80px; /* Adjust top and bottom margins */
+    font-family: 'Roboto', sans-serif; /* New font for the big paragraph */
+    font-size: 18px; /* Adjust size if needed */
+    color: #333; /* Change text color */
+    </style>
+
+<footer>© 2025 Our School. All rights reserved.</footer>
+<style>
+
+ footer {
+    background-color: #94B16F; /* Same as navbar background color */
+    color: black;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-family:'Roboto';
+}
+</style>
+
+<script>
+    function toggleMenu() {
+        var menu = document.getElementById("menuDropdown");
+        if (menu.style.display === "block") {
+            menu.style.display = "none";
+        } else {
+            menu.style.display = "block";
+        }
+    }
+</script>
+
+</body>
+</html>
